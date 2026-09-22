@@ -1,38 +1,3 @@
-   64  cd ~/xv6-riscv
-   65  make qemu
-   66  sudo apt update && sudo apt install -y git build-essential gdb-multiarch qemu-system-misc qemu-system-riscv gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu
-   67  riscv64-linux-gnu-gcc --version
-   68  qemu-system-riscv64 --version
-   69  cd ~/xv6-riscv
-   70  make qemu
-   71  mkdir ~/so-lab02
-   72  cd ~/so-lab02
-   73  mkdir imgs
-   74  nano ~/so-lab02/lab02.md
-   75  cd ~
-   76  git clone https://github.com/wuillpillaca27-crypto/LABO-SO-380.git ~/so-lab02
-   77  cd ~/so-lab02
-   78  mkdir imgs
-   79  lenovo@DESKTOP-UC2IO69:~/xv6-riscv$ mkdir ~/so-lab02
-   80  cd ~/so-lab02
-   81  mkdir imgs
-   82  lenovo@DESKTOP-UC2IO69:~/so-lab02$ nano ~/so-lab02/lab02.md
-   83  lenovo@DESKTOP-UC2IO69:~/so-lab02$ cd ~
-   84  git clone https://github.com/wuillpillaca27-crypto/LABO-SO-380.git ~/so-lab02
-   85  cd ~/so-lab02
-   86  mkdir imgs
-   87  fatal: destination path '/home/lenovo/so-lab02' already exists and is not an empty directory.
-   88  mkdir: imgs: File exists
-   89  lenovo@DESKTOP-UC2IO69:~/so-lab02$
-   90  cd ~/so-lab02
-   91  mkdir -p imgs
-   92  git init
-   93  git branch -M main
-   94  git remote add origin https://github.com/wuillpillaca27-crypto/LABO-SO-380.git
-   95  git pull origin main --allow-unrelated-histories
-   96  # Commit 1
-   97  touch README.md
-   98  git add README.md
    99  git commit -m "commit 1: inicializacion de estructura del laboratorio so-lab02"
   100  # Commit 2
   101  lsb_release -a > verifique_ubuntu.txt
@@ -48,3 +13,38 @@
   111  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
   112  # Commit 5
   113  history | tail -n 50 > historial_comandos.txt
+  114  git add historial_comandos.txt
+  115  git commit -m "commit 5: registro de comandos ejecutados dentro y fuera de xv6"
+  116  # Commit 6
+  117  git add lab02.md
+  118  git commit -m "commit 6: redaccion del informe completo lab02.md"
+  119  # Commit 7
+  120  echo "Laboratorio 02 completado exitosamente." >> README.md
+  121  git add README.md
+  122  git commit -m "commit 7: conclusion del laboratorio y entrega final"
+  123  git add imgs/
+  124  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
+  125  git log --oneline
+  126  git push -u origin main
+  127  git log --oneline
+  128  git add imgs/
+  129  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
+  130  git push origin main
+  131  git add imgs/
+  132  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
+  133  git push origin main
+  134  touch imgs/.gitkeep
+  135  git add imgs/
+  136  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
+  137  git push origin main
+  138  git log --oneline
+  139  cd ~/so-lab02
+  140  lsb_release -a > verifique_ubuntu.txt
+  141  riscv64-linux-gnu-gcc --version > toolchain_version.txt
+  142  qemu-system-riscv64 --version >> toolchain_version.txt
+  143  git add verifique_ubuntu.txt toolchain_version.txt
+  144  git commit -m "configuracion de entorno Ubuntu, instalacion de toolchain RISC-V y QEMU"
+  145  [200~echo "Entorno Ubuntu y Toolchain RISC-V configurados." > entorno.txt
+  146  git add entorno.txt verifique_ubuntu.txt toolchain_version.txt
+  147  git commit -m "configuracion de entorno Ubuntu, instalacion de toolchain RISC-V y QEMU"
+  148  history | tail -n 50 > historial_comandos.txt
