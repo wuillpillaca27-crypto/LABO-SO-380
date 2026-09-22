@@ -1,0 +1,50 @@
+   64  cd ~/xv6-riscv
+   65  make qemu
+   66  sudo apt update && sudo apt install -y git build-essential gdb-multiarch qemu-system-misc qemu-system-riscv gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu
+   67  riscv64-linux-gnu-gcc --version
+   68  qemu-system-riscv64 --version
+   69  cd ~/xv6-riscv
+   70  make qemu
+   71  mkdir ~/so-lab02
+   72  cd ~/so-lab02
+   73  mkdir imgs
+   74  nano ~/so-lab02/lab02.md
+   75  cd ~
+   76  git clone https://github.com/wuillpillaca27-crypto/LABO-SO-380.git ~/so-lab02
+   77  cd ~/so-lab02
+   78  mkdir imgs
+   79  lenovo@DESKTOP-UC2IO69:~/xv6-riscv$ mkdir ~/so-lab02
+   80  cd ~/so-lab02
+   81  mkdir imgs
+   82  lenovo@DESKTOP-UC2IO69:~/so-lab02$ nano ~/so-lab02/lab02.md
+   83  lenovo@DESKTOP-UC2IO69:~/so-lab02$ cd ~
+   84  git clone https://github.com/wuillpillaca27-crypto/LABO-SO-380.git ~/so-lab02
+   85  cd ~/so-lab02
+   86  mkdir imgs
+   87  fatal: destination path '/home/lenovo/so-lab02' already exists and is not an empty directory.
+   88  mkdir: imgs: File exists
+   89  lenovo@DESKTOP-UC2IO69:~/so-lab02$
+   90  cd ~/so-lab02
+   91  mkdir -p imgs
+   92  git init
+   93  git branch -M main
+   94  git remote add origin https://github.com/wuillpillaca27-crypto/LABO-SO-380.git
+   95  git pull origin main --allow-unrelated-histories
+   96  # Commit 1
+   97  touch README.md
+   98  git add README.md
+   99  git commit -m "commit 1: inicializacion de estructura del laboratorio so-lab02"
+  100  # Commit 2
+  101  lsb_release -a > verifique_ubuntu.txt
+  102  git add verifique_ubuntu.txt
+  103  git commit -m "commit 2: verificacion de version de Ubuntu 24.04 en WSL2"
+  104  # Commit 3
+  105  riscv64-linux-gnu-gcc --version > toolchain_version.txt
+  106  qemu-system-riscv64 --version >> toolchain_version.txt
+  107  git add toolchain_version.txt
+  108  git commit -m "commit 3: instalacion y verificacion de toolchain RISC-V y QEMU"
+  109  # Commit 4 (Asegúrate de colocar parteA_1.png y parteC.png en ~/so-lab02/imgs/ antes de ejecutar este bloque si deseas registrarlas)
+  110  git add imgs/
+  111  git commit -m "commit 4: adicion de capturas de pantalla de la Parte A y Parte C"
+  112  # Commit 5
+  113  history | tail -n 50 > historial_comandos.txt
